@@ -187,7 +187,7 @@ const Nav = ({ isHome }) => {
         <StaticImage
           className="img"
           src="../images/tao.png"
-          width={500}
+          width={100}
           quality={95}
           formats={['AUTO', 'WEBP', 'AVIF']}
           alt="Headshot"
