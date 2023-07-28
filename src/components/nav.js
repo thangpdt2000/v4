@@ -7,7 +7,7 @@ import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
-import { IconLogo, IconHex } from '@components/icons';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -183,25 +183,16 @@ const Nav = ({ isHome }) => {
 
   const Logo = (
     <div className="logo" tabIndex="-1">
-      {isHome ? (
-        <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
-        </a>
-      ) : (
-        <Link to="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
-        </Link>
-      )}
+      <Link to="/" target="_blank" rel="noreferrer">
+        <StaticImage
+          className="img"
+          src="../images/tao.png"
+          width={500}
+          quality={95}
+          formats={['AUTO', 'WEBP', 'AVIF']}
+          alt="Headshot"
+        />
+      </Link>
     </div>
   );
 
