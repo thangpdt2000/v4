@@ -8,6 +8,7 @@ import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { StaticImage } from 'gatsby-plugin-image';
+import { IconHex } from '@components/icons';
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
@@ -184,6 +185,9 @@ const Nav = ({ isHome }) => {
     <div className="logo" tabIndex="-1">
       {isHome ? (
         <a href="/" aria-label="home">
+          <div className="hex-container">
+            <IconHex />
+          </div>
           <div className="logo-container">
             <StaticImage
               className="img"
@@ -199,6 +203,9 @@ const Nav = ({ isHome }) => {
       ) : (
         <Link to="/" aria-label="home">
           <div className="logo-container">
+            <div className="hex-container">
+              <IconHex />
+            </div>
             <StaticImage
               className="img"
               src="../images/tao.png"
