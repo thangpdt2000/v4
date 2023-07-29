@@ -8,7 +8,6 @@ import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { StaticImage } from 'gatsby-plugin-image';
-
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
@@ -183,16 +182,35 @@ const Nav = ({ isHome }) => {
 
   const Logo = (
     <div className="logo" tabIndex="-1">
-      <Link to="/" target="_blank" rel="noreferrer">
-        <StaticImage
-          className="img"
-          src="../images/tao.png"
-          width={100}
-          quality={95}
-          formats={['AUTO', 'WEBP', 'AVIF']}
-          alt="Headshot"
-        />
-      </Link>
+      {isHome ? (
+        <a href="/" aria-label="home">
+          <div className="logo-container">
+            <StaticImage
+              className="img"
+              src="../images/tao.png"
+              width={800}
+              height={800}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Headshot"
+            />
+          </div>
+        </a>
+      ) : (
+        <Link to="/" aria-label="home">
+          <div className="logo-container">
+            <StaticImage
+              className="img"
+              src="../images/tao.png"
+              width={800}
+              height={800}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Headshot"
+            />
+          </div>
+        </Link>
+      )}
     </div>
   );
 
