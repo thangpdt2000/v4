@@ -8,7 +8,6 @@ import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IconHex } from '@components/icons';
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
@@ -185,36 +184,34 @@ const Nav = ({ isHome }) => {
     <div className="logo" tabIndex="-1">
       {isHome ? (
         <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
           <div className="logo-container">
-            <StaticImage
-              className="img"
-              src="../images/tao.png"
-              width={800}
-              height={800}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            />
+            <div className="logo-container">
+              <StaticImage
+                className="img"
+                src="../images/tao.png"
+                width={800}
+                height={800}
+                quality={95}
+                formats={['AUTO', 'WEBP', 'AVIF']}
+                alt="Headshot"
+              />
+            </div>
           </div>
         </a>
       ) : (
         <Link to="/" aria-label="home">
           <div className="logo-container">
-            <div className="hex-container">
-              <IconHex />
+            <div className="logo-container">
+              <StaticImage
+                className="img"
+                src="../images/tao.png"
+                width={800}
+                height={800}
+                quality={95}
+                formats={['AUTO', 'WEBP', 'AVIF']}
+                alt="Headshot"
+              />
             </div>
-            <StaticImage
-              className="img"
-              src="../images/tao.png"
-              width={800}
-              height={800}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            />
           </div>
         </Link>
       )}
