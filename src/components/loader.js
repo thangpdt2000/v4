@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 import styled from 'styled-components';
-import { IconLoader } from '@components/icons';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -86,7 +86,15 @@ const Loader = ({ finishLoading }) => {
       <Helmet bodyAttributes={{ class: `hidden` }} />
 
       <div className="logo-wrapper">
-        <IconLoader />
+        <StaticImage
+          className="img"
+          src="../images/tao.png"
+          width={800}
+          height={800}
+          quality={95}
+          formats={['AUTO', 'WEBP', 'AVIF']}
+          alt="Headshot"
+        />
       </div>
     </StyledLoader>
   );

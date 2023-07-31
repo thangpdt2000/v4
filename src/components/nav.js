@@ -121,6 +121,9 @@ const StyledLinks = styled.div`
     padding: 0;
     margin: 0;
     list-style: none;
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     li {
       margin: 0 5px;
@@ -185,33 +188,29 @@ const Nav = ({ isHome }) => {
       {isHome ? (
         <a href="/" aria-label="home">
           <div className="logo-container">
-            <div className="logo-container">
-              <StaticImage
-                className="img"
-                src="../images/tao.png"
-                width={800}
-                height={800}
-                quality={95}
-                formats={['AUTO', 'WEBP', 'AVIF']}
-                alt="Headshot"
-              />
-            </div>
+            <StaticImage
+              className="img"
+              src="../images/tao.png"
+              width={800}
+              height={800}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Headshot"
+            />
           </div>
         </a>
       ) : (
         <Link to="/" aria-label="home">
           <div className="logo-container">
-            <div className="logo-container">
-              <StaticImage
-                className="img"
-                src="../images/tao.png"
-                width={800}
-                height={800}
-                quality={95}
-                formats={['AUTO', 'WEBP', 'AVIF']}
-                alt="Headshot"
-              />
-            </div>
+            <StaticImage
+              className="img"
+              src="../images/tao.png"
+              width={800}
+              height={800}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Headshot"
+            />
           </div>
         </Link>
       )}
