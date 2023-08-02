@@ -3,7 +3,7 @@ date: '2018-05-14'
 title: 'Back-end Engineer'
 company: 'Novus Fintech'
 location: '106 Hoang Quoc Viet, Cau Giay, Ha Noi'
-range: 'Jun 2022 - Present'
+range: 'May 2022 - Present'
 url: 'https://www.novus-fintech.com/'
 ---
 
