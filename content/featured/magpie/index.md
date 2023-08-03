@@ -3,7 +3,6 @@ date: '3'
 title: 'MAGPIE SECURITIES'
 cover: './Screen Shot 2023-07-28 at 2.56.58 PM.png'
 external: 'https://www.magpiesecurities.com/'
-cta: 'https://www.magpiesecurities.com/'
 tech:
   - NodeJS
   - ReactJS
